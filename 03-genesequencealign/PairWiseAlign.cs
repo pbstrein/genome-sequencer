@@ -33,10 +33,9 @@ namespace GeneticsLab
             ResultTable.Result result = new ResultTable.Result();
             int score;                                                       // place your computed alignment score here
             string[] alignment = new string[2];                              // place your two computed alignments here
-
-
+            
             // ********* these are placeholder assignments that you'll replace with your code  *******
-            GenomeSequencer genomeSequencer = new GenomeSequencer(sequenceA, sequenceB);
+            GenomeSequencer genomeSequencer = new GenomeSequencer(sequenceA, sequenceB, MaxCharactersToAlign);
             genomeSequencer.calculateSequenceCost(banded);
             score = 0;                                                
             alignment[0] = "";
