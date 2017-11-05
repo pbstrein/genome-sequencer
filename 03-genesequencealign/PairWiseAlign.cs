@@ -36,8 +36,8 @@ namespace GeneticsLab
             
             // ********* these are placeholder assignments that you'll replace with your code  *******
             GenomeSequencer genomeSequencer = new GenomeSequencer(sequenceA, sequenceB, MaxCharactersToAlign);
-            genomeSequencer.calculateSequenceCost(banded);
-            score = 0;                                                
+            score = genomeSequencer.calculateSequenceCost(banded);
+            //score = 0;                                                
             alignment[0] = "";
             alignment[1] = "";
             // ***************************************************************************************
