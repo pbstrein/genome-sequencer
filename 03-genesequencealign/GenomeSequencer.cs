@@ -85,7 +85,7 @@ namespace GeneticsLab
         private void setCost(int row, int col)
         {
             int topIndelCost = alignmentCost[col][row - 1] + 5;
-            int leftIndelCost = alignmentCost[col - 1][row];
+            int leftIndelCost = alignmentCost[col - 1][row] + 5;
             int diagonalCost = alignmentCost[col-1][row - 1];
             if (sequenceA.Sequence[col -1] == sequenceB.Sequence[row - 1])
             {
