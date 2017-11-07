@@ -7,6 +7,9 @@ namespace GeneticsLab
 {
     class GenomeSequencer
     {
+        private const int UP = 1;
+        private const int LEFT = 2;
+        private const int DIAGONAL = 4;
 
         private enum Location { UP, LEFT, DIAGONAL }; //this is used for the previous matrix to know where the value came from
         private GeneSequence sequenceA;
@@ -19,7 +22,7 @@ namespace GeneticsLab
         private string alignmentB;
 
         private int[][] alignmentCost; //the way this is being setup, the first [] is the coloumn, and the second [] is the row, alignmentCost[col][row]
-        private Location[][] previousMatrix;
+        private int[][] previousMatrix;
 
         private void initializeAlignmentCost()
         {
@@ -32,10 +35,10 @@ namespace GeneticsLab
 
         private void initializePreviousMatrix()
         {
-            previousMatrix = new Location[colSize][];
+            previousMatrix = new int[colSize][];
             for (int i = 0; i < previousMatrix.Length; i++)
             {
-                previousMatrix[i] = new Location[rowSize];
+                previousMatrix[i] = new int[rowSize];
             }
 
         }
@@ -61,6 +64,7 @@ namespace GeneticsLab
         {
             //initialize base cases, setting to 0
             //set first row to be 0
+            /*
             for (int i = 0; i < alignmentCost.Length; i++) {
                 alignmentCost[i][0] = i * 5;
             }
@@ -69,6 +73,7 @@ namespace GeneticsLab
             {
                 alignmentCost[0][i] = i * 5;
             }
+            */
 
             //start top and work my way down, so I fill in every column in a row, then move to the next row
             for (int i = 1; i < alignmentCost[0].Length; i++ ) // loop through each row
@@ -100,18 +105,20 @@ namespace GeneticsLab
                     lowestCost = Math.Min(lowestCost, diagonalCost);
 
                     //set the previous matrix so we can rebuild the string
+                   
                     if (lowestCost == topIndelCost)
                     {
-                        previousMatrix[j][i] = Location.UP;
+                        previousMatrix[j][i] = UP;
                     }
                     else if (lowestCost == leftIndelCost)
                     {
-                        previousMatrix[j][i] = Location.LEFT;
+                        previousMatrix[j][i] = LEFT;
                     }
                     else
                     {
-                        previousMatrix[j][i] = Location.DIAGONAL;
+                        previousMatrix[j][i] = DIAGONAL;
                     }
+                    
                     alignmentCost[j][i] = lowestCost;
                     //setCost(i, j);
                 }
@@ -122,6 +129,7 @@ namespace GeneticsLab
 
         private void setCost(int row, int col)
         {
+            /*
             int topIndelCost = alignmentCost[col][row - 1] + 5;
             int leftIndelCost = alignmentCost[col - 1][row] + 5;
             int diagonalCost = alignmentCost[col-1][row - 1];
@@ -152,6 +160,7 @@ namespace GeneticsLab
                 previousMatrix[col][row] = Location.DIAGONAL;
             }
             alignmentCost[col][row] = lowestCost;
+            */
         }
 
         private string reconstructSequenceB()

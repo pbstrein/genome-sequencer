@@ -1,0 +1,13 @@
+C:\Users\pbstr\source\repos\GeneSequencing\GeneSequenceAlignment\GeneSequenceAlignment\03-genesequencealign\bin\Release\GeneticsLab.exe.manifest
+C:\Users\pbstr\source\repos\GeneSequencing\GeneSequenceAlignment\GeneSequenceAlignment\03-genesequencealign\bin\Release\GeneticsLab.application
+C:\Users\pbstr\source\repos\GeneSequencing\GeneSequenceAlignment\GeneSequenceAlignment\03-genesequencealign\bin\Release\GeneticsLab.exe
+C:\Users\pbstr\source\repos\GeneSequencing\GeneSequenceAlignment\GeneSequenceAlignment\03-genesequencealign\bin\Release\GeneticsLab.pdb
+C:\Users\pbstr\source\repos\GeneSequencing\GeneSequenceAlignment\GeneSequenceAlignment\03-genesequencealign\obj\Release\GeneticsLab.MainForm.resources
+C:\Users\pbstr\source\repos\GeneSequencing\GeneSequenceAlignment\GeneSequenceAlignment\03-genesequencealign\obj\Release\GeneticsLab.Properties.Resources.resources
+C:\Users\pbstr\source\repos\GeneSequencing\GeneSequenceAlignment\GeneSequenceAlignment\03-genesequencealign\obj\Release\GeneticsLab.csproj.GenerateResource.Cache
+C:\Users\pbstr\source\repos\GeneSequencing\GeneSequenceAlignment\GeneSequenceAlignment\03-genesequencealign\obj\Release\GeneticsLab.csproj.CoreCompileInputs.cache
+C:\Users\pbstr\source\repos\GeneSequencing\GeneSequenceAlignment\GeneSequenceAlignment\03-genesequencealign\obj\Release\GeneticsLab.exe.manifest
+C:\Users\pbstr\source\repos\GeneSequencing\GeneSequenceAlignment\GeneSequenceAlignment\03-genesequencealign\obj\Release\GeneticsLab.application
+C:\Users\pbstr\source\repos\GeneSequencing\GeneSequenceAlignment\GeneSequenceAlignment\03-genesequencealign\obj\Release\GeneticsLab.exe
+C:\Users\pbstr\source\repos\GeneSequencing\GeneSequenceAlignment\GeneSequenceAlignment\03-genesequencealign\obj\Release\GeneticsLab.pdb
+C:\Users\pbstr\source\repos\GeneSequencing\GeneSequenceAlignment\GeneSequenceAlignment\03-genesequencealign\obj\Release\GeneticsLab.csprojResolveAssemblyReference.cache
