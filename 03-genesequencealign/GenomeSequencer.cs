@@ -73,9 +73,47 @@ namespace GeneticsLab
             //start top and work my way down, so I fill in every column in a row, then move to the next row
             for (int i = 1; i < alignmentCost[0].Length; i++ ) // loop through each row
             {
-                for (int j = 1; j < alignmentCost.Length; j++)
+                int bandLength = alignmentCost.Length;
+                int bandStart = 1; 
+                if (isBanded)
                 {
-                    setCost(i, j);
+                    bandLength = Math.Min(i + 3, bandLength);
+                    bandStart = i;
+                }
+                for (int j = bandStart; j < bandLength; j++)
+                {
+
+                    int topIndelCost = alignmentCost[j][i - 1] + 5;
+                    int leftIndelCost = alignmentCost[j - 1][i] + 5;
+                    int diagonalCost = alignmentCost[j-1][i - 1];
+                    if (sequenceA.Sequence[j -1] == sequenceB.Sequence[i - 1])
+                    {
+                        diagonalCost -= 3;
+                    }
+                    else
+                    {
+                        diagonalCost += 1;
+                    }
+
+                    //compare top, left, and diagonal for the least
+                    int lowestCost = Math.Min(topIndelCost, leftIndelCost); 
+                    lowestCost = Math.Min(lowestCost, diagonalCost);
+
+                    //set the previous matrix so we can rebuild the string
+                    if (lowestCost == topIndelCost)
+                    {
+                        previousMatrix[j][i] = Location.UP;
+                    }
+                    else if (lowestCost == leftIndelCost)
+                    {
+                        previousMatrix[j][i] = Location.LEFT;
+                    }
+                    else
+                    {
+                        previousMatrix[j][i] = Location.DIAGONAL;
+                    }
+                    alignmentCost[j][i] = lowestCost;
+                    //setCost(i, j);
                 }
             }
 
